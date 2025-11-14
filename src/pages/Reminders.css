@@ -1,0 +1,229 @@
+.reminders-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.reminders-page h1 {
+  font-size: 28px;
+  margin-bottom: 32px;
+  color: #333;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+}
+
+.reminders-list {
+  display: grid;
+  gap: 16px;
+}
+
+.reminder-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s;
+  border-left: 4px solid #ddd;
+}
+
+.reminder-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.reminder-card.status-taken {
+  border-left-color: #84fab0;
+  background: #f0fdf8;
+}
+
+.reminder-card.status-skipped {
+  border-left-color: #fa709a;
+  background: #fdf0f5;
+}
+
+.reminder-card.status-pending {
+  border-left-color: #667eea;
+}
+
+.reminder-content {
+  flex: 1;
+}
+
+.reminder-time {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.reminder-med {
+  margin-bottom: 12px;
+}
+
+.reminder-med h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #333;
+}
+
+.reminder-med p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.reminder-med strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.reminder-status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.taken {
+  background: #d4f8e8;
+  color: #0b7d4a;
+}
+
+.status-badge.skipped {
+  background: #fad4dc;
+  color: #7d1d2b;
+}
+
+.status-badge.scheduled {
+  background: #e8eeff;
+  color: #2e3c96;
+}
+
+.reminder-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.taken {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  color: white;
+}
+
+.action-btn.taken:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(132, 250, 176, 0.3);
+}
+
+.action-btn.skipped {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  color: white;
+}
+
+.action-btn.skipped:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(250, 112, 154, 0.3);
+}
+
+.empty-state {
+  background: white;
+  border-radius: 12px;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state svg {
+  color: #ddd;
+  margin-bottom: 16px;
+}
+
+.empty-state h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 0 0 8px;
+}
+
+.empty-state p {
+  color: #999;
+  font-size: 14px;
+  margin: 0;
+}
+
+.reminders-loading {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  .reminder-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reminder-status {
+    justify-content: flex-start;
+  }
+
+  .reminder-actions {
+    width: 100%;
+  }
+
+  .action-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
